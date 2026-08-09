@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>06｜GO / STOP | TRADE LOGIC</title>
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body data-page="go-stop">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../">TRADE <span>LOGIC</span></a>
+      <div class="header-note">06｜GO / STOP</div>
+    </div>
+  </header>
+  <main class="wrap">
+    <a class="back-link" href="../logic/">← ロジック（手法）へ戻る</a>
+    <p class="page-kicker">06｜GO / STOP</p>
+    <h1 class="page-title">GO / STOP Case Study</h1>
+    <p class="page-intro">基本手法本体とは分離したケーススタディ。値幅とSetupの崩れを見る。</p>
+
+    <section class="block">
+      <h2>CASE 01｜ENTRY方向に上位MAがある</h2>
+      <p>例: H4 SMA20 ≒ H1 MA75付近</p>
+      <div class="note"><strong>重要:</strong> 上位MAがある = STOP ではない。ENTRY地点から障害まで十分な値幅が残っているかを見る。</div>
+      <ul>
+        <li><span class="tag go">GO</span> 障害まで距離あり → そこまでをTargetとしてTrade可能</li>
+        <li><span class="tag stop">STOP</span> 障害が近すぎる → 値幅不足</li>
+      </ul>
+      <div class="chart-stack">
+        <figure class="chart-card">
+          <button type="button" class="chart-hit"><img data-img="IMG-13.png" alt="GO Case"></button>
+          <figcaption class="chart-cap">IMG-13｜GO Case</figcaption>
+        </figure>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit"><img data-img="img-14.png" alt="STOP 値幅不足"></button>
+          <figcaption class="chart-cap">IMG-14｜STOP / 障害距離不足</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>CASE 02｜Setup崩れ</h2>
+      <ul>
+        <li>D1基準ライン割れ</li>
+        <li>H1 SMA20との関係崩れ</li>
+        <li>M15 MA75 / MA100側へ潜る</li>
+        <li>Granvilleとしての組み立て崩れ</li>
+      </ul>
+      <p>→ SETUP INCOMPLETE → ENTRY CANCEL</p>
+      <figure class="chart-card">
+        <button type="button" class="chart-hit"><img data-img="img-15.png" alt="Setup崩れ"></button>
+        <figcaption class="chart-cap">IMG-15｜Setup崩れ</figcaption>
+      </figure>
+    </section>
+
+    <section class="block" id="questions">
+      <h2>ご質問・コメント</h2>
+      <p>
+        「ここが分かりにくい」「この場合はどう考える？」など、
+        本サイトで公開している内容についてご質問がありましたら、できる限りお答えします。
+      </p>
+      <p>
+        いただいたご質問は、今後の解説ページ・FAQ・過去検証追加の参考にする場合があります。
+      </p>
+      <p>
+        <a class="cta-btn" href="../questions/">質問・コメントを送る</a>
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">Distance matters more than the obstacle’s name.</footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

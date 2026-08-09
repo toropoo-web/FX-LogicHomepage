@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>質問・コメント | TRADE LOGIC</title>
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body data-page="questions">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../">TRADE <span>LOGIC</span></a>
+      <div class="header-note">質問・コメント</div>
+    </div>
+  </header>
+  <main class="wrap">
+    <a class="back-link" href="../faq/">← FAQへ戻る</a>
+    <p class="page-kicker">Questions</p>
+    <h1 class="page-title">質問・コメント</h1>
+    <p class="page-intro">
+      本サイトで公開しているTrade Logicについて、
+      分かりにくい点・疑問点・ご意見がありましたらお送りください。
+    </p>
+    <p class="page-intro">可能な範囲で回答いたします。</p>
+    <p class="page-intro">
+      いただいた質問のうち、
+      他の閲覧者にも参考になる内容については、
+      内容を確認したうえでFAQ・解説ページ等へ掲載する場合があります。
+    </p>
+
+    <section class="block">
+      <h2>ご質問の掲載について</h2>
+      <p>
+        いただいた質問・コメントは、
+        自動的に公開されるものではありません。
+      </p>
+      <p>内容を確認し、</p>
+      <ul>
+        <li>Trade Logicの理解に役立つもの</li>
+        <li>同じ疑問を持つ方の参考になるもの</li>
+        <li>公開して問題のない内容</li>
+      </ul>
+      <p>
+        については、
+        FAQや解説ページへ掲載する場合があります。
+      </p>
+      <p>
+        掲載する場合も、
+        メールアドレス等の個人情報は公開しません。
+      </p>
+      <div class="note">
+        誹謗中傷、広告、宣伝、スパム、
+        その他サイト運営上不適切と判断した内容は掲載しません。<br>
+        掲載同意のない質問は、FAQ等への掲載対象にしません。
+      </div>
+      <div class="flow">
+        質問送信<br>↓<br>管理者確認<br>↓<br>返信<br>↓<br>必要なものだけFAQ等へ掲載
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>メールアドレスの取り扱い</h2>
+      <p>メールアドレスは、</p>
+      <ul>
+        <li>質問への返信</li>
+        <li>質問内容の確認</li>
+      </ul>
+      <p>のために使用します。</p>
+      <div class="note">
+        サイト上へ公開しません。<br>
+        また、質問受付で入力されたメールアドレスを、
+        本人の同意なく更新通知・メルマガ等へ登録しません。
+      </div>
+    </section>
+
+    <section class="block" id="question-form">
+      <h2>質問・コメントを送る</h2>
+      <!--
+        Formspree接続:
+        data-formspree-endpoint に https://formspree.io/f/XXXXXXXX を設定する。
+        受信先メールは Formspree 管理画面側で設定する（サイトソースへ書かない）。
+      -->
+      <form
+        class="question-form"
+        id="questionForm"
+        method="POST"
+        data-formspree-endpoint="https://formspree.io/f/xnpajrgw"
+        novalidate
+      >
+        <!-- honeypot: Formspree spam trap / 後から拡張可能 -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="q-website">Website</label>
+          <input id="q-website" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        </div>
+
+        <div class="form-field">
+          <label for="q-email">メールアドレス <span class="req">必須</span></label>
+          <input id="q-email" name="email" type="email" required autocomplete="email" placeholder="example@example.com">
+        </div>
+
+        <div class="form-field">
+          <label for="q-name">お名前 / ハンドルネーム <span class="opt">任意</span></label>
+          <input id="q-name" name="name" type="text" autocomplete="nickname" placeholder="任意">
+        </div>
+
+        <div class="form-field">
+          <label for="q-category">質問カテゴリー <span class="opt">任意</span></label>
+          <select id="q-category" name="category">
+            <option value="">選択してください</option>
+            <option value="Logic全体">Logic全体</option>
+            <option value="UpDateStall">UpDateStall</option>
+            <option value="Dow理論">Dow理論</option>
+            <option value="Granville">Granville</option>
+            <option value="波の見方">波の見方</option>
+            <option value="Formation">Formation</option>
+            <option value="過去検証">過去検証</option>
+            <option value="GO / STOP">GO / STOP</option>
+            <option value="その他">その他</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="q-body">質問 / コメント <span class="req">必須</span></label>
+          <textarea id="q-body" name="message" rows="8" required placeholder="分かりにくかった点や、ご質問・ご意見をご記入ください。"></textarea>
+        </div>
+
+        <div class="form-check">
+          <label>
+            <input id="q-publish" name="publish_consent" type="checkbox" value="yes">
+            <span>
+              質問内容を、個人を特定できない形で
+              FAQ・解説ページ等へ掲載することに同意する
+            </span>
+          </label>
+        </div>
+
+        <p>
+          <button type="submit" class="cta-btn" id="questionSubmit">送信する</button>
+        </p>
+        <p id="questionFormStatus" class="note" hidden></p>
+      </form>
+    </section>
+
+    <section class="block">
+      <h2>よくある質問</h2>
+      <p>先にFAQをご確認いただくと、すでに回答がある場合があります。</p>
+      <p>
+        <a class="detail-link" href="../faq/">よくある質問を見る</a>
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">Questions grow the FAQ.</footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

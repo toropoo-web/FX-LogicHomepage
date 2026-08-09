@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>07｜TakeProfit（利確考察）｜Fibonacci | TRADE LOGIC</title>
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body data-page="fibonacci">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../">TRADE <span>LOGIC</span></a>
+      <div class="header-note">07｜TakeProfit</div>
+    </div>
+  </header>
+  <main class="wrap">
+    <a class="back-link" href="../logic/">← ロジック（手法）へ戻る</a>
+    <p class="page-kicker">07｜TakeProfit｜Fibonacci</p>
+    <h1 class="page-title">TakeProfit（利確考察）｜Fibonacci</h1>
+    <p class="page-intro">
+      本Logicでは、
+      Fibonacci ExpansionをENTRY Signalとしてではなく、
+      主にTakeProfit（利確ポイント）を考えるための目安として使用します。
+    </p>
+    <p class="page-intro">
+      Fibonacciだけで利確位置を決めるのではなく、
+      上位時間軸のMAやSupport / Resistanceと組み合わせて判断します。
+    </p>
+
+    <section class="block">
+      <h2>M15 Fibonacciについて</h2>
+      <p>
+        M15の波全体にFibonacci Expansionを当てた場合、
+        161.8%は大きすぎるTargetになることがあります。
+      </p>
+      <p>
+        そのため筆者は、
+        M15全体ではなく、
+        M5の①＝1波（推進）の高値・安値
+        にFibonacci Expansionを当てて、
+        利確候補を測ることが多いです。
+      </p>
+      <div class="flow">
+        M15でTrade方向を確認<br>
+        ↓<br>
+        M5① 1波（推進）を確認<br>
+        ↓<br>
+        M5①の高値・安値にFibonacci Expansion<br>
+        ↓<br>
+        TakeProfit候補を確認
+      </div>
+      <div class="note">
+        M15全体の161.8%を固定のTakeProfitルールとしては使いません。
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>上位時間軸もTakeProfit判断に使う</h2>
+      <p>
+        Fibonacci Expansionの数値だけで
+        TakeProfitを決めるわけではありません。
+      </p>
+      <p>
+        特に、
+        大勢の方向に対する逆張りになるTradeでは、
+        値幅を伸ばしすぎないことも重要です。
+      </p>
+      <p>その場合は、</p>
+      <ul>
+        <li>Fibonacci ExpansionのTarget</li>
+        <li>H1 / H4など上位時間軸のMA</li>
+        <li>上位時間軸のSupport / Resistance</li>
+      </ul>
+      <p>
+        を確認し、
+        上位時間軸から反発を受けそうな場所の手前を
+        TakeProfit候補として考えます。
+      </p>
+    </section>
+
+    <section class="block">
+      <div class="note">
+        <strong>
+          「どこまで伸びるか」をFibonacciで測り、
+          「どこで止められそうか」を上位時間軸で確認する。
+        </strong><br><br>
+        これが本LogicでのTakeProfitの考え方です。
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Chartで見るもの</h2>
+      <div class="split">
+        <div>
+          <ul>
+            <li>Fibonacci Expansion（伸びの目安）</li>
+            <li>Fibonacci Retracement 逆あて（ENTRYから障害までの残り値幅）</li>
+            <li>Take Profit候補の抵抗MA：H1 MA75 / H4 SMA20</li>
+          </ul>
+          <div class="note">
+            Expansionで伸びを可視化し、Retracement逆あてで残り値幅を確認する。
+            H4 SMA20 / H1 MA75付近をResistance / Take Profit候補として見る。
+            ENTRY Signalとしては使わない。
+          </div>
+        </div>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit"><img data-img="IMG-16.png" alt="TakeProfit考察 Fibonacci補助"></button>
+          <figcaption class="chart-cap">IMG-16｜Expansion + Retracement逆あて + MA抵抗</figcaption>
+        </figure>
+      </div>
+      <a class="detail-link" href="../go-stop/">値幅判断 → GO / STOP</a>
+    </section>
+
+    <section class="block" id="questions">
+      <h2>ご質問・コメント</h2>
+      <p>
+        「ここが分かりにくい」「この場合はどう考える？」など、
+        本サイトで公開している内容についてご質問がありましたら、できる限りお答えします。
+      </p>
+      <p>
+        いただいたご質問は、今後の解説ページ・FAQ・過去検証追加の参考にする場合があります。
+      </p>
+      <p>
+        <a class="cta-btn" href="../questions/">質問・コメントを送る</a>
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">Measure distance. Don’t invent entries.</footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

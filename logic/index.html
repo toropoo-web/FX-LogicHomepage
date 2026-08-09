@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01｜ロジック（手法）公開 | TRADE LOGIC</title>
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body data-page="logic">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../">TRADE <span>LOGIC</span></a>
+      <div class="header-note">01｜ロジック</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <a class="back-link" href="../">← TOPへ</a>
+    <p class="page-kicker">01｜Logic</p>
+    <h1 class="page-title">ロジック（手法）公開</h1>
+    <h2 class="page-lead-title">相場の失速をきっかけに、次の値動きを組み立てる</h2>
+    <p class="page-intro">
+      本手法では、
+      上位時間軸の環境認識から現在位置と方向を確認し、
+      MA・<button type="button" class="term" data-term="Granville">Granville</button>・Dow理論・<button type="button" class="term" data-term="Formation">Formation</button>・下位時間軸の値動きを組み合わせながら、
+      ENTRY Pointを探していきます。
+    </p>
+    <p class="page-intro">
+      特別なSignalだけに答えを求めるのではなく、
+      Chart上に繰り返し現れる値動きを順番に確認しながら
+      Trade Scenarioを組み立てるLogicです。
+    </p>
+    <div class="note">
+      本ロジックは<strong>XAUUSD</strong>を主な対象としている。トレンドが出やすい銘柄と相性が良い。
+      考え方自体は他通貨ペアにも応用可能。
+    </div>
+
+    <section class="block" id="yellow-star">
+      <h2>Chart上の黄色★について</h2>
+      <p>
+        本サイトのChartでは、
+        <button type="button" class="term" data-term="UpDateStall">UpDateStall</button>の発生ポイントを黄色の『★』で表示しています。
+      </p>
+      <p>
+        Chartを見る際は、
+        まず黄色★の位置を確認し、
+        その前後のH4 Candle、
+        H4 MA5、
+        その後のM15・M5の値動きを順番に追ってください。
+      </p>
+    </section>
+
+    <section class="block" id="without-updatestall">
+      <h2>UpDateStallをお持ちでない方へ</h2>
+      <p>
+        UpDateStallインジケーターをお持ちでなくても、
+        このLogicを確認することはできます。
+      </p>
+      <p>
+        まずはH4 Chart上のShort Candleを
+        仮の観測基準として置き、
+        その後の値動きを追ってみてください。
+      </p>
+      <div class="flow">
+        H4 Short Candle<br>↓<br>H4 MA5 / Granville<br>↓<br>M15の値動きを確認<br>↓<br>必要に応じてM5へ時間軸を落として確認
+      </div>
+      <p>
+        という順番で過去Chartを追うことで、
+        本手法の考え方を確認できます。
+      </p>
+      <p>
+        このあと本ページでは、M15の値動きを
+      </p>
+      <div class="flow">
+        ① 1波（推進）<br>
+        ↓<br>
+        ② 2波（調整）<br>
+        ↓<br>
+        ③ 3波（再推進）
+      </div>
+      <p>
+        として表現します。
+      </p>
+      <p>
+        「①②③とは何を意味するのか？」という方は、
+        先に「波の見方」を確認してください。
+      </p>
+      <p>
+        <a class="detail-link" href="../wave/">①②③・波の見方を見る</a>
+      </p>
+      <div class="note">
+        <strong>重要:</strong> Short Candle ＝ UpDateStall という意味ではありません。<br>
+        あくまで、UpDateStallインジケーターを持っていない方が
+        Logicを確認・検証するための仮の観測基準として使用します。
+      </div>
+    </section>
+
+    <section class="block" id="chart-setting">
+      <h2>Chart Setting｜本サイトのChart表示</h2>
+      <p>
+        本サイトのChartでは、
+        以下のMoving Averageを基準として表示しています。
+      </p>
+
+      <div class="setting-table-wrap">
+        <table class="setting-table">
+          <thead>
+            <tr>
+              <th scope="col">色</th>
+              <th scope="col">Moving Average</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="ma-swatch ma-blue" aria-hidden="true"></span>青</td>
+              <td>DMA 3×3</td>
+            </tr>
+            <tr>
+              <td><span class="ma-swatch ma-orange" aria-hidden="true"></span>橙</td>
+              <td>SMA5<br>または下位時間軸上のSMA20相当</td>
+            </tr>
+            <tr>
+              <td><span class="ma-swatch ma-red" aria-hidden="true"></span>赤</td>
+              <td>SMA20</td>
+            </tr>
+            <tr>
+              <td><span class="ma-swatch ma-yellow" aria-hidden="true"></span>黄</td>
+              <td>SMA75</td>
+            </tr>
+            <tr>
+              <td><span class="ma-swatch ma-green" aria-hidden="true"></span>緑</td>
+              <td>SMA100</td>
+            </tr>
+            <tr>
+              <td><span class="ma-swatch ma-purple" aria-hidden="true"></span>紫</td>
+              <td>SMA200</td>
+            </tr>
+            <tr>
+              <td><span class="ma-swatch ma-tan" aria-hidden="true"></span>薄茶</td>
+              <td>SMA600</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>点線のMAについて</h3>
+      <p>
+        Chart上に表示されている
+        同色の点線は、
+        上位時間軸のSMAを
+        下位時間軸へ表示したものです。
+      </p>
+      <p>使用Indicator：<strong>MTF-MA 1.00</strong></p>
+      <p>
+        本サイトでは、
+        週足（W1）までの上位時間軸MAを
+        必要に応じて下位時間軸へ表示しています。
+      </p>
+
+      <div class="note">
+        <strong>重要:</strong>
+        これらのMAは、
+        「MAがCrossしたからENTRYする」
+        ためだけに使用しているものではありません。<br><br>
+        本サイトでは、
+        <ul>
+          <li>現在価格が上位時間軸を含めてどこにいるのか</li>
+          <li>MAの方向</li>
+          <li>Support / Resistance</li>
+          <li>Granville</li>
+          <li>上位時間軸と下位時間軸の位置関係</li>
+        </ul>
+        などを確認するための基準として使用しています。
+      </div>
+
+      <p>
+        本サイトでは後述するように、
+        H4 SMA5 ≒ H1 SMA20
+        など、
+        異なる時間軸で同じ値動きを確認する見方も使用します。
+      </p>
+      <p>
+        また、
+        M15 SMA20はH4 Candle、
+        M5 SMA20はH1 Candle
+        とリンクすることが多い、
+        という見方も使用しています。
+      </p>
+      <p>詳細は各Logic説明・波の見方で解説します。</p>
+      <p>
+        <a class="detail-link" href="../wave/">波の見方を見る</a>
+      </p>
+    </section>
+
+    <!-- BLOCK 01 -->
+    <section class="block" id="block-01">
+      <h2>BLOCK 01｜環境認識</h2>
+      <div class="split">
+        <div>
+          <p>Trade前に現在位置を確認する。</p>
+          <ul>
+            <li>D1</li>
+            <li>前日終値 / 高値 / 安値</li>
+            <li>前日足のヒゲ</li>
+            <li>Support / Resistance</li>
+            <li>上位時間軸の主要MA</li>
+          </ul>
+          <p>日足ラインは方向確認だけでなく、Support / Resistance / Target判断にも使う。</p>
+        </div>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit" aria-label="Chart拡大">
+            <img data-img="IMG-01.png" alt="環境認識 Chart">
+          </button>
+          <figcaption class="chart-cap">IMG-01｜環境認識</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOCK 02 -->
+    <section class="block" id="block-02">
+      <h2>BLOCK 02｜基準</h2>
+      <div class="split">
+        <div>
+          <p><button type="button" class="term" data-term="UpDateStall">H4 UpDateStall</button>を、Trade Scenarioを考え始める基準として利用する。</p>
+          <div class="note">
+            <strong>重要:</strong> UpDateStall = ENTRY Signal ではない。<br>
+            「ここから組み立てる」というSTART地点。
+          </div>
+          <a class="detail-link" href="../basis/">詳細 → 基準（basis/）</a>
+        </div>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit" aria-label="Chart拡大">
+            <img data-img="IMG-02.png" alt="H4 UpDateStall Chart">
+          </button>
+          <figcaption class="chart-cap">IMG-02｜H4 UpDateStall　／　黄色★：H4 UpDateStall</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOCK 03 -->
+    <section class="block" id="block-03">
+      <h2>BLOCK 03｜H4 MA5 / Granville</h2>
+      <div class="split">
+        <div>
+          <ul>
+            <li>H4 MA5の方向</li>
+            <li>価格との位置関係</li>
+            <li><button type="button" class="term" data-term="Granville">Granville</button>として組み立てられる形か</li>
+          </ul>
+          <p>対応: <button type="button" class="term" data-term="H4 MA5 = H1 SMA20">H4 MA5 = H1 SMA20</button></p>
+          <div class="note">
+            <strong>重要:</strong> 「価格がMAより上だからLONG」「下だからSHORT」という単純判定にはしない。
+          </div>
+          <p>
+            GranvilleとDowを単純に別々のSignalとして加算しているわけではない。
+          </p>
+          <div class="flow">
+            H4 MA5からGranvilleを考察<br>↓<br>その方向への値動きを想定<br>↓<br>M15① → ② → ③<br>↓<br>②内部でM5 Dow成立<br>↓<br>M15の安値切り上げへ
+          </div>
+          <p>
+            筆者は、<strong>「Granvilleの概念が、その方向へのDowの切り上げを促進する材料になる」</strong>と判断している。
+            これは筆者のTrade上の判断であり、Granville理論そのものの定義ではない。
+          </p>
+          <a class="detail-link" href="../granville/">詳細 → Granville</a>
+        </div>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit" aria-label="Chart拡大">
+            <img data-img="IMG-03.png" alt="H4 MA5 Granville Chart">
+          </button>
+          <figcaption class="chart-cap">IMG-03｜H4 MA5 / Granville</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOCK 04 -->
+    <section class="block" id="block-04">
+      <h2>BLOCK 04｜M15 ① → ② → ③</h2>
+      <div class="split">
+        <div>
+          <p><button type="button" class="term" data-term="M15①②③">M15①②③</button></p>
+          <ul>
+            <li><strong>M15①</strong>: 最初の推進 / 戻り高値更新</li>
+            <li><strong>M15②</strong>: 押し</li>
+            <li><strong>M15③</strong>: 狙う推進</li>
+          </ul>
+          <div class="note"><strong>重要:</strong> ①を追わず、②を待って③を狙う。</div>
+        </div>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit" aria-label="Chart拡大">
+            <img data-img="IMG-04.png" alt="M15 ①②③ Chart">
+          </button>
+          <figcaption class="chart-cap">IMG-04｜M15 ①②③</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOCK 05 -->
+    <section class="block" id="block-05">
+      <h2>BLOCK 05｜M15①で戻り高値更新</h2>
+      <div class="split">
+        <div>
+          <p>M15①で、<button type="button" class="term" data-term="戻り高値">戻り高値</button>更新が完了していることを確認する。</p>
+          <p>Dow理論上、次に必要なのは<button type="button" class="term" data-term="安値切り上げ">安値切り上げ</button>。</p>
+          <a class="detail-link" href="../dow/">詳細 → Dow理論</a>
+        </div>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit" aria-label="Chart拡大">
+            <img data-img="IMG-05.png" alt="M15① 戻り高値更新 Chart">
+          </button>
+          <figcaption class="chart-cap">IMG-05｜M15① 戻り高値更新</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOCK 06 -->
+    <section class="block" id="block-06">
+      <h2>BLOCK 06｜M15②内部をM5で見る</h2>
+      <p>M15②では一つの押しに見える。M5へ落とすと内部<button type="button" class="term" data-term="Formation">Formation</button>を確認できる。</p>
+      <ul>
+        <li>Double Bottom型Formation</li>
+        <li>右側安値が左側より高い</li>
+        <li>M5高値更新</li>
+        <li>M5 Dow成立</li>
+      </ul>
+      <p>
+        Formationは、完成したChartを後から見れば結果論として形を認識できるものでもある。
+        しかし本手法では、Formationの見た目だけを根拠にはしない。
+      </p>
+      <p>
+        例えばM15②内部で、メジャーなFormationが現れ、右側安値が切り上がり、M5高値更新、M5 Dow成立という値動きを確認する。
+      </p>
+      <p>
+        筆者は、Dow理論や広く知られたFormationほど市場参加者から認識されやすく、
+        注目が集まりやすいことで同じような値動きの再現性が高まりやすいと考えている。
+      </p>
+      <div class="note">
+        <strong>重要:</strong> 「逆三尊だからENTRY」という単独Signalとしては使わない。
+        Formation内部でもM5 Dowが成立していることを重視する。
+      </div>
+      <p>この下位足Formationから、M15②がこれ以上下落しない可能性が高まったと判断し、M15の安値切り上げを「先行判断」する。</p>
+      <div class="note">
+        <strong>重要:</strong> M5 Dow成立 = M15 Dow成立 ではない。
+        M15で後に確認される可能性のある切り上げを、下位足から一段早く捉える考え方。
+      </div>
+      <h3>なぜM15 Dow成立前にENTRYを考えるのか</h3>
+      <p>
+        M15でDow成立を完全に確認してからENTRYすると、
+        M15③がすでに進行しており、ENTRY位置が遅くなる場合がある。
+      </p>
+      <div class="flow">
+        Formation<br>↓<br>M5 Dow成立<br>↓<br>M15安値切り上げを先行判断<br>↓<br>右肩付近からENTRY
+      </div>
+      <p>
+        これによってENTRYを一段早く組み立てられれば、
+      </p>
+      <ul>
+        <li>ENTRYからLoss Cutまでの距離を抑えやすい</li>
+        <li>M15③の値幅をより大きく確保しやすい</li>
+        <li>Risk / Rewardの改善につながる</li>
+      </ul>
+      <p>
+        早くENTRYすること自体が目的ではない。
+        目的は、Loss Cutへの対策とRisk / Rewardの改善を含めたTrade組み立てである。
+      </p>
+      <div class="chart-stack">
+        <figure class="chart-card">
+          <button type="button" class="chart-hit"><img data-img="IMG-06.png" alt="M15②内部 M5"></button>
+          <figcaption class="chart-cap">IMG-06｜M15②内部 M5</figcaption>
+        </figure>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit"><img data-img="IMG-07.png" alt="Formation"></button>
+          <figcaption class="chart-cap">IMG-07｜Formation</figcaption>
+        </figure>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit"><img data-img="IMG-08.png" alt="M5 Dow成立"></button>
+          <figcaption class="chart-cap">IMG-08｜M5 Dow成立</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOCK 07 -->
+    <section class="block" id="block-07">
+      <h2>BLOCK 07｜ここまでの準備で補完</h2>
+      <p>M5だけでENTRYを決めるのではない。ここまで準備してきた情報が、M15②の切り上げ先行判断を補完する。</p>
+      <ul>
+        <li>D1環境認識 / 方向</li>
+        <li>H4 UpDateStall</li>
+        <li>H4 MA5 / Granville</li>
+        <li>M15①高値更新</li>
+        <li>Formation</li>
+      </ul>
+      <p>「想像」ではなく、市場が実際の値動きとして示したFormationを使う。</p>
+    </section>
+
+    <!-- BLOCK 08 -->
+    <section class="block" id="block-08">
+      <h2>BLOCK 08｜同じFormationを他時間軸でも見る</h2>
+      <p>同じ値動きを、異なる見方で確認できる。両方を全部見る必要はない。認識しやすい見方を使う。</p>
+      <div data-tabs>
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab-btn is-active" data-tab="ma">MAで見る</button>
+          <button type="button" class="tab-btn" data-tab="candle">Candleで見る</button>
+        </div>
+        <div class="tab-panel" data-panel="ma">
+          <ul>
+            <li><button type="button" class="term" data-term="M15 SMA20 ≒ H4 Candle">M15 SMA20 ≒ H4 Candle</button></li>
+            <li><button type="button" class="term" data-term="M5 SMA20 ≒ H1 Candle">M5 SMA20 ≒ H1 Candle</button></li>
+          </ul>
+          <div class="chart-stack">
+            <figure class="chart-card">
+              <button type="button" class="chart-hit"><img data-img="IMG-10.png" alt="M15 SMA20 + H4 Candle"></button>
+              <figcaption class="chart-cap">IMG-10｜M15 SMA20 + H4 Candle</figcaption>
+            </figure>
+            <figure class="chart-card">
+              <button type="button" class="chart-hit"><img data-img="IMG-12.png" alt="M5 SMA20 + H1 Candle"></button>
+              <figcaption class="chart-cap">IMG-12｜M5 SMA20 + H1 Candle</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="tab-panel" data-panel="candle" hidden>
+          <ul>
+            <li>H4 Candle Formation</li>
+            <li>H1 Candle Formation</li>
+          </ul>
+          <figure class="chart-card">
+            <button type="button" class="chart-hit"><img data-img="IMG-11.png" alt="H4 Candle側"></button>
+            <figcaption class="chart-cap">IMG-11｜H4 Candle側</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 09 -->
+    <section class="block" id="block-09">
+      <h2>BLOCK 09｜M15③を狙う</h2>
+      <div class="split">
+        <div>
+          <div class="flow">
+            環境認識<br>↓<br>UpDateStall<br>↓<br>H4 MA5 / Granville<br>↓<br>M15① 高値更新<br>↓<br>M15②<br>↓<br>M5 Formation / Dow<br>↓<br>M15安値切り上げを先行判断<br>↓<br>M15③ ENTRY
+          </div>
+          <div class="note">
+            「M15 SMA20、戻り高値更新完了済み。<br>
+            逆三尊の右肩を獲得するTradeでした！」
+          </div>
+        </div>
+        <figure class="chart-card">
+          <button type="button" class="chart-hit"><img data-img="IMG-09.png" alt="ENTRY → M15③"></button>
+          <figcaption class="chart-cap">IMG-09｜ENTRY → M15③</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BLOCK 10 -->
+    <section class="block" id="block-10">
+      <h2>BLOCK 10｜なぜDow / Granvilleを使うのか</h2>
+      <p>Dow理論やGranvilleの法則は、多くの市場参加者の分析・Trade Logicに組み込まれている。</p>
+      <p>
+        筆者は、それだけ多くの参加者が著名な理論を利用していることで、
+        同じ価格構造や反応が繰り返されやすくなり、再現性が高まっていると感じている。
+      </p>
+      <p>
+        さらに筆者は少し大げさに、
+        「DowやGranvilleは、単なる理論というよりChart上に繰り返し現れる現象に近い」
+        と捉えている。
+      </p>
+      <p>この手法では、Dow / Granvilleを軸に再現性の高いポイントを探す。</p>
+      <p>
+        <a class="detail-link" href="../dow/">Dow理論へ</a>　
+        <a class="detail-link" href="../granville/">Granvilleへ</a>　
+        <a class="detail-link" href="../wave/">波動へ</a>
+      </p>
+      <!-- future extension hooks -->
+      <div class="missing" data-future="video" hidden>
+        [ Formationを動画で見る ]
+      </div>
+      <div class="missing" data-future="app" hidden>
+        [ このロジックを検証アプリで試す ]
+      </div>
+    </section>
+
+    <section class="block" id="extra-ma-formation">
+      <h2>番外編｜MA × Formationをもっと見たい方へ</h2>
+      <p>
+        本手法では、MAだけ、Formationだけを見るのではなく、
+        「MAとFormationがどのように組み合わさっているか」を見ています。
+      </p>
+      <p>
+        「他にはどんな組み合わせがあるの？」という方には、こんなものもあります。
+      </p>
+      <p>おすすめLINEスタンプ（笑）</p>
+      <ul>
+        <li>Role Reversal</li>
+        <li>Double Bottom / Top</li>
+        <li>Head &amp; Shoulders</li>
+        <li>Channel</li>
+        <li>Flag</li>
+        <li>Wedge</li>
+        <li>Triangle</li>
+      </ul>
+      <p>など、MAとFormationの組み合わせが図になっています。</p>
+      <p>意外と、このLogicでChartを観察するときのヒントが詰まっています。</p>
+      <figure class="chart-card">
+        <button type="button" class="chart-hit"><img data-img="IMG-25.png" alt="MA × Formation LINEスタンプ紹介"></button>
+        <figcaption class="chart-cap">IMG-25｜番外編 MA × Formation</figcaption>
+      </figure>
+      <p>
+        <a class="cta-btn" href="https://store.line.me/stickershop/product/17180776/ja" target="_blank" rel="noopener noreferrer">LINE STOREで見る（外部リンク）</a>
+      </p>
+    </section>
+
+    <section class="block" id="updatestall-benefit">
+      <h2>UpDateStallを使って検証したい方へ</h2>
+      <p>
+        本サイトと同じ観測基準で過去Chartを検証したい方向けに、
+        UpDateStallインジケーターの登録者特典を検討しています。
+      </p>
+      <p>提供条件については現在準備中です。</p>
+      <div class="note">登録者特典・準備中</div>
+    </section>
+
+    <section class="block" id="questions">
+      <h2>ご質問・コメント</h2>
+      <p>
+        「ここが分かりにくい」「この場合はどう考える？」など、
+        本サイトで公開している内容についてご質問がありましたら、できる限りお答えします。
+      </p>
+      <p>
+        いただいたご質問は、今後の解説ページ・FAQ・過去検証追加の参考にする場合があります。
+      </p>
+      <p>
+        <a class="cta-btn" href="../questions/">質問・コメントを送る</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">Logic first. Theory supports the Chart.</footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

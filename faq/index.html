@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10｜FAQ / よくある質問 | TRADE LOGIC</title>
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body data-page="faq">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../">TRADE <span>LOGIC</span></a>
+      <div class="header-note">10｜FAQ</div>
+    </div>
+  </header>
+  <main class="wrap">
+    <a class="back-link" href="../logic/">← ロジック（手法）へ戻る</a>
+    <p class="page-kicker">10｜FAQ</p>
+    <h1 class="page-title">FAQ / よくある質問</h1>
+    <p class="page-intro">
+      本サイトのTrade Logicについて、疑問になりやすいポイントをまとめています。
+    </p>
+    <p class="page-intro">
+      「ここが分かりにくい」「この場合はどう考える？」などのご質問も、できる限りお答えします。
+    </p>
+    <p class="page-intro">
+      いただいたご質問の中から、他の方にも参考になりそうな内容はこのFAQへ追加していく予定です。
+    </p>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Q01｜UpDateStallを持っていないと、この手法は使えませんか？</summary>
+        <div class="faq-answer">
+          <p>いいえ。</p>
+          <p>
+            UpDateStallをお持ちでなくても、このLogicを確認・過去検証することはできます。
+          </p>
+          <p>
+            まずはH4 ChartのShort Candleを仮の観測基準として、その後の値動きを追ってみてください。
+          </p>
+          <div class="flow">
+            H4 Short Candle<br>↓<br>H4 MA5 / Granville<br>↓<br>M15の値動きを確認<br>↓<br>必要に応じてM5へ時間軸を落として確認
+          </div>
+          <p>という流れを確認できます。</p>
+          <p>
+            M15の「①②③」表現については、
+            <a class="detail-link" href="../wave/">①②③・波の見方を見る</a>
+            を確認してください。
+          </p>
+          <div class="note">
+            <strong>重要:</strong> Short Candle ＝ UpDateStall という意味ではありません。<br>
+            Short Candleは、UpDateStallを持っていない方がLogicを確認するための仮の観測基準です。
+          </div>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q02｜Chartの黄色い「★」は何ですか？</summary>
+        <div class="faq-answer">
+          <p>黄色★は、本サイトで使用しているH4 UpDateStallの発生ポイントです。</p>
+          <p>
+            筆者はこのポイントを、「ここでENTRYする」というSignalではなく、
+            「ここから次の値動きを観測し、Trade Scenarioを組み立て始める」ための基準として使用しています。
+          </p>
+          <a class="detail-link" href="../basis/">詳細 → 基準（basis/）</a>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q03｜UpDateStallが点灯したらENTRYするのですか？</summary>
+        <div class="faq-answer">
+          <p>いいえ。</p>
+          <div class="note"><strong>UpDateStall点灯 ＝ ENTRY</strong> ではありません。</div>
+          <p>黄色★を観測基準として、次を確認しながらENTRYできるScenarioになるかを組み立てます。</p>
+          <ul>
+            <li>環境認識</li>
+            <li>H4 MA5</li>
+            <li>Granville</li>
+            <li>M15の値動き</li>
+            <li>M5 Formation / Dow</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q04｜なぜM15のDow成立まで待たないのですか？</summary>
+        <div class="faq-answer">
+          <p>
+            本手法では、M15①で戻り高値更新を確認したあと、
+            M15②内部をM5へ分解して確認します。
+          </p>
+          <p>
+            M5でFormationが形成され、Dowが成立することで、
+            M15で後に確認される可能性のある安値切り上げを一段早く判断します。
+          </p>
+          <p>
+            M15のDow成立を完全に待つと、M15③がすでに進行し、
+            ENTRY位置が遅くなる場合があります。
+          </p>
+          <p>一段早くENTRYを組み立てることで、</p>
+          <ul>
+            <li>Loss Cutまでの距離を抑えやすい</li>
+            <li>M15③の値幅を確保しやすい</li>
+            <li>Risk / Rewardの改善につながる</li>
+          </ul>
+          <div class="note">
+            <strong>重要:</strong> M5 Dow成立 ＝ M15 Dow成立 ではありません。
+          </div>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q05｜Formationが出ればENTRYしてよいのですか？</summary>
+        <div class="faq-answer">
+          <p>FormationだけでENTRYを判断するわけではありません。</p>
+          <p>例えばM15②内部で、次を確認します。</p>
+          <ul>
+            <li>メジャーなFormation</li>
+            <li>安値切り上げ</li>
+            <li>M5高値更新</li>
+            <li>M5 Dow成立</li>
+          </ul>
+          <p>また、その前段階として次の準備があります。</p>
+          <ul>
+            <li>環境認識</li>
+            <li>UpDateStall</li>
+            <li>H4 MA5</li>
+            <li>Granville</li>
+            <li>M15①の戻り高値更新</li>
+          </ul>
+          <p>
+            筆者は、広く知られているFormationやDow理論ほど
+            市場参加者から注目されやすく、その結果として再現性が高まりやすいと考えています。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q06｜GranvilleとDowは別々のENTRY Signalですか？</summary>
+        <div class="faq-answer">
+          <p>単純に別々のSignalとして足し算しているわけではありません。</p>
+          <div class="flow">
+            H4 MA5からGranvilleを考察<br>↓<br>その方向への値動きを想定<br>↓<br>M15① → ② → ③<br>↓<br>M15②内部でM5 Dow成立<br>↓<br>M15の安値切り上げへ
+          </div>
+          <p>
+            筆者は、<strong>「Granvilleの概念が、その方向へのDowの切り上げを促進する材料になる」</strong>と判断しています。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q07｜H4 MA5より上ならLONG、下ならSHORTですか？</summary>
+        <div class="faq-answer">
+          <p>いいえ。</p>
+          <p>MAの上下だけで方向を決める手法ではありません。</p>
+          <p>
+            H4 MA5の方向、価格との位置関係、Granvilleとして組み立てられるか、
+            上位時間軸の環境や障害などを確認します。
+          </p>
+          <a class="detail-link" href="../granville/">詳細 → Granville</a>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q08｜ENTRY方向にH1 MA75やH4 SMA20があったらTradeしませんか？</summary>
+        <div class="faq-answer">
+          <p>必ずSTOPという意味ではありません。</p>
+          <p>
+            ENTRY Pointから障害となるMAまで十分な値幅が残っていれば、
+            そのMAをTake Profit候補として障害までのTradeを組み立てる場合があります。
+          </p>
+          <p>
+            反対に、障害までの距離が近すぎる場合は、値幅不足としてSTOPを考えます。
+          </p>
+          <a class="detail-link" href="../go-stop/">詳細 → GO / STOP</a>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q09｜「十分な距離」はどう判断しますか？</summary>
+        <div class="faq-answer">
+          <p>Chart上のSupport / Resistanceや上位時間軸のMAまでの距離を確認します。</p>
+          <p>
+            また、Fibonacci ExpansionとFibonacci Retracementの逆あてを使い、
+            ENTRYから障害までの値幅を数値として可視化する場合もあります。
+          </p>
+          <a class="detail-link" href="../fibonacci/">詳細 → TakeProfit（利確考察）</a>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q10｜キレイなChartだけを実例として載せていませんか？</summary>
+        <div class="faq-answer">
+          <p>その通りです。</p>
+          <p>
+            筆者は、条件がキレイに揃ったポイントを選んでTradeしています。
+            キレイな形ほどレートが素直に伸びやすいと考えているためです。
+          </p>
+          <p>逆に、次のような場面ではTradeリスクが増えると考えています。</p>
+          <ul>
+            <li>Formationが不明瞭</li>
+            <li>MAとの関係が崩れている</li>
+            <li>障害が近い</li>
+            <li>Setupが揃っていない</li>
+          </ul>
+          <p>
+            どんなChartでもENTRY Pointを探すのではなく、
+            「条件が揃うまで待つ」ことも本手法の一部です。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q11｜過去検証は何のためにするのですか？</summary>
+        <div class="faq-answer">
+          <p>
+            勝率やTrade結果を確認することだけが過去検証の目的ではありません。
+          </p>
+          <p>
+            筆者は、「Trade Logicを自分の言葉へ翻訳する作業」でもあると考えています。
+          </p>
+          <p>
+            同じ「押し目」「切り上げ」「Formation」という言葉でも、
+            Chart上でどう認識するかにはいろいろな角度があります。
+          </p>
+          <div class="flow">
+            見る<br>↓<br>考える<br>↓<br>言葉にする<br>↓<br>もう一度Chartで確認する
+          </div>
+          <p>
+            これを繰り返すことで、「知っている手法」から「自分で判断できる手法」へ近づけていきます。
+          </p>
+          <p>
+            外国語を学ぶことと同じように、実際に何度も使いながら自分自身が理解することを重視します。
+          </p>
+          <a class="detail-link" href="../validation/">詳細 → 過去検証</a>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Q12｜UpDateStallインジケーターは入手できますか？</summary>
+        <div class="faq-answer">
+          <p>
+            本サイトと同じ観測基準で過去Chartを検証したい方向けに、
+            登録者特典を検討しています。
+          </p>
+          <p>提供条件については現在準備中です。</p>
+          <div class="note">登録者特典・準備中</div>
+        </div>
+      </details>
+    </div>
+
+    <section class="block" id="faq-contact">
+      <h2>解決しませんでしたか？</h2>
+      <p>
+        FAQにないご質問についても、
+        本サイトで公開している内容についてできる限りお答えします。
+      </p>
+      <p>
+        <a class="cta-btn" href="../questions/">質問・コメントを送る</a>
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">Questions grow the FAQ.</footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>

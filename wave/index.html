@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>05｜波動 | TRADE LOGIC</title>
+  <link rel="stylesheet" href="../css/site.css">
+</head>
+<body data-page="wave">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../">TRADE <span>LOGIC</span></a>
+      <div class="header-note">05｜波動</div>
+    </div>
+  </header>
+  <main class="wrap">
+    <a class="back-link" href="../logic/">← ロジック（手法）へ戻る</a>
+    <p class="page-kicker">05｜Wave</p>
+    <h1 class="page-title">波動</h1>
+    <div class="note">
+      <strong>重要:</strong> Elliott Waveの厳密なカウントではない。値動きの現在地を整理するための補助。
+    </div>
+
+    <section class="block">
+      <h2>基本：①推進 → ②押し → ③次の推進</h2>
+      <p><button type="button" class="term" data-term="M15①②③">M15①②③</button>として使う。</p>
+      <p>
+        ②内部では、<button type="button" class="term" data-term="Formation">Formation</button>の見た目だけを根拠にせず、
+        M5 Dow成立などとあわせて現在地を整理する。
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>見方の切替</h2>
+      <div data-tabs>
+        <div class="tabs">
+          <button type="button" class="tab-btn is-active" data-tab="ma">MA基準</button>
+          <button type="button" class="tab-btn" data-tab="candle">Candle基準</button>
+        </div>
+        <div class="tab-panel" data-panel="ma">
+          <ul>
+            <li><button type="button" class="term" data-term="M15 SMA20 ≒ H4 Candle">M15 SMA20</button>の波</li>
+            <li><button type="button" class="term" data-term="M5 SMA20 ≒ H1 Candle">M5 SMA20</button>の波</li>
+          </ul>
+          <div class="chart-stack">
+            <figure class="chart-card">
+              <button type="button" class="chart-hit"><img data-img="IMG-10.png" alt="M15 SMA20"></button>
+              <figcaption class="chart-cap">IMG-10｜M15 SMA20側</figcaption>
+            </figure>
+            <figure class="chart-card">
+              <button type="button" class="chart-hit"><img data-img="IMG-12.png" alt="M5 SMA20"></button>
+              <figcaption class="chart-cap">IMG-12｜M5 SMA20側</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="tab-panel" data-panel="candle" hidden>
+          <ul>
+            <li>H4 Candle</li>
+            <li>H1 Candle</li>
+          </ul>
+          <figure class="chart-card">
+            <button type="button" class="chart-hit"><img data-img="IMG-11.png" alt="H4 Candle"></button>
+            <figcaption class="chart-cap">IMG-11｜H4 Candle側</figcaption>
+          </figure>
+        </div>
+      </div>
+      <a class="detail-link" href="../logic/#block-08">ロジック該当箇所へ</a>
+    </section>
+
+    <section class="block" id="questions">
+      <h2>ご質問・コメント</h2>
+      <p>
+        「ここが分かりにくい」「この場合はどう考える？」など、
+        本サイトで公開している内容についてご質問がありましたら、できる限りお答えします。
+      </p>
+      <p>
+        いただいたご質問は、今後の解説ページ・FAQ・過去検証追加の参考にする場合があります。
+      </p>
+      <p>
+        <a class="cta-btn" href="../questions/">質問・コメントを送る</a>
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">Locate the move. Don’t force a count.</footer>
+  <script src="../js/site.js"></script>
+</body>
+</html>
