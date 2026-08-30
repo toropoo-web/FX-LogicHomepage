@@ -1080,6 +1080,29 @@ body[data-page="home"] .hero .sub {
   max-width: 36rem;
 }
 
+.roadmap-row {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 1.75rem;
+  align-items: start;
+}
+
+.roadmap-row .roadmap {
+  margin: 0;
+  max-width: none;
+}
+
+.roadmap-row .learn-visual {
+  margin: 0;
+  max-width: none;
+}
+
+@media (min-width: 900px) {
+  .roadmap-row {
+    grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+  }
+}
+
 .roadmap a {
   display: flex;
   align-items: baseline;
