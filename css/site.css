@@ -491,6 +491,39 @@ body[data-page="home"] .hero .sub {
   gap: 1rem;
 }
 
+.dow-schema {
+  max-width: 40rem;
+  margin: 1rem auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.dow-schema .chart-hit {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.dow-schema img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.dow-schema figcaption {
+  padding: 0.65rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
 .tabs {
   display: flex;
   gap: 0.5rem;
@@ -1328,6 +1361,10 @@ body[data-page="home"] .hero .sub {
 
   .learn-visual,
   .learn-visual--portrait {
+    max-width: none;
+  }
+
+  .dow-schema {
     max-width: none;
   }
 }

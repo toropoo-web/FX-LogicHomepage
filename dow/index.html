@@ -26,6 +26,160 @@
     </p>
 
     <section class="block">
+      <h2>高値・安値と、切り上げ・切り下げ</h2>
+      <p>
+        Dow理論では、Chartの高値と安値がどのように推移しているかを見る。
+      </p>
+      <p>
+        高値・安値が前より高い位置にできることを「切り上げ」。
+        前より低い位置にできることを「切り下げ」という。
+      </p>
+      <ul>
+        <li>上昇Trend：高値切り上げ ＋ 安値切り上げ</li>
+        <li>下降Trend：高値切り下げ ＋ 安値切り下げ</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>重要原則</h2>
+      <div class="note">
+        <strong>重要:</strong> Trendは、明確な転換サインが出るまで継続すると考える。
+      </div>
+      <p>
+        価格が一度逆方向へ動いたことだけでTrend転換とは判断しない。
+        高値側・安値側の両方の構造を確認する。
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>押し安値と戻り高値</h2>
+      <p>
+        <strong>押し安値:</strong>
+        上昇中に一度下げ、そこから再び高値を更新したことで確定する安値。
+      </p>
+      <p>
+        <strong>戻り高値:</strong>
+        下降中に一度上げ、そこから再び安値を更新したことで確定する高値。
+      </p>
+      <div class="note">
+        谷ができた瞬間に押し安値が確定する、山ができた瞬間に戻り高値が確定する、とは考えない。
+        次の高値更新 / 安値更新によって確定する。
+      </div>
+    </section>
+
+    <section class="block" id="dow-down-to-up">
+      <h2>下降 → 上昇｜転換成功</h2>
+      <p>図の赤番号は高値、青番号は安値。</p>
+      <figure class="dow-schema">
+        <button type="button" class="chart-hit"><img data-img="image-dow1.png" alt="下降トレンドから上昇トレンドへの転換成功"></button>
+        <figcaption>image-dow1｜転換：下降トレンド → 上昇トレンド</figcaption>
+      </figure>
+      <p>
+        下降Trendでは、高値は赤① → 赤② → 赤③、安値は青① → 青② → 青③と、
+        高値・安値ともに切り下げている。赤③は下降Trendの戻り高値。
+      </p>
+      <p class="learn-flow">赤③を上抜く → 高値側に上昇への変化が出る → 赤④を形成 → 押して青④を形成 → 再び上昇して赤④を上抜く</p>
+      <p>
+        赤④を上抜いたことで、青④が押し安値として確定する。
+        ここで高値切り上げ ＋ 安値切り上げが揃う。
+      </p>
+      <p>
+        この時点を「下降Trend → 上昇TrendのDow転換完了」として見る。
+        赤③を最初に上抜いただけでは、転換完了とは判断しない。
+      </p>
+    </section>
+
+    <section class="block" id="dow-down-to-up-fail">
+      <h2>下降 → 上昇｜転換失敗</h2>
+      <p>同じ下降Trendから、上昇転換しそうに見えたが完成しなかった例。</p>
+      <figure class="dow-schema">
+        <button type="button" class="chart-hit"><img data-img="image-dow1-1.png" alt="下降トレンドが上昇トレンドにならなかった転換失敗"></button>
+        <figcaption>image-dow1-1｜転換失敗：下降トレンドが上昇トレンドにならなかった</figcaption>
+      </figure>
+      <p class="learn-flow">赤③を上抜く → 赤④を形成 → 青④を形成</p>
+      <p>ここまでは上昇転換の途中に見える。</p>
+      <p>
+        しかし、青④から上昇しても赤④を上抜けない。
+        そのため、青④が上昇Dowを完成させる押し安値として確定する構造にならず、
+        高値・安値双方の上昇Dowが完成しない。その後、再び下方向へ進む。
+      </p>
+      <div class="note">
+        「戻り高値を一度上抜いた」だけでは上昇Dow転換完了ではない。
+        明確な転換完成が確認できなければ、元のTrendが継続している可能性を見る。
+      </div>
+    </section>
+
+    <section class="block" id="dow-up-to-down">
+      <h2>上昇 → 下降｜転換成功</h2>
+      <p>図の赤番号は高値、青番号は安値。</p>
+      <figure class="dow-schema">
+        <button type="button" class="chart-hit"><img data-img="image-dow2.png" alt="上昇トレンドから下降トレンドへの転換成功"></button>
+        <figcaption>image-dow2｜転換：上昇トレンド → 下降トレンド</figcaption>
+      </figure>
+      <p>
+        上昇Trendでは、高値は赤① → 赤② → 赤③、安値は青① → 青②と、
+        高値・安値ともに切り上げている。青②は上昇Trendの押し安値。
+      </p>
+      <p class="learn-flow">青②を下抜く → 安値側に下降への変化が出る → 新しい安値を形成 → 戻して戻り高値候補を形成 → 再び下落 → 直前に形成した新しい安値を下抜く</p>
+      <p>
+        最後の安値更新によって、直前の山が戻り高値として確定する。
+        ここで安値切り下げ ＋ 高値切り下げが揃う。
+      </p>
+      <p>
+        この時点を「上昇Trend → 下降TrendのDow転換完了」として見る。
+        青②を最初に下抜いただけでは、転換完了とは判断しない。
+      </p>
+    </section>
+
+    <section class="block" id="dow-up-to-down-fail">
+      <h2>上昇 → 下降｜転換失敗</h2>
+      <p>上昇Trendから、下降転換しそうに見えたが完成しなかった例。</p>
+      <figure class="dow-schema">
+        <button type="button" class="chart-hit"><img data-img="image-dow2-1.png" alt="上昇トレンドが下降トレンドにならなかった転換失敗"></button>
+        <figcaption>image-dow2-1｜転換失敗：上昇トレンドが下降トレンドにならなかった</figcaption>
+      </figure>
+      <p class="learn-flow">押し安値を下抜く → 新しい安値を形成 → 戻りを作る</p>
+      <p>ここまでは下降転換の途中に見える。</p>
+      <p>
+        しかし、再下落しても直前の新しい安値を更新できない。
+        そのため、戻りの山が下降Dowを完成させる戻り高値として確定する構造にならず、
+        高値・安値双方の下降Dowが完成しない。その後、再び上方向へ進む。
+      </p>
+      <div class="note">
+        「押し安値を一度下抜いた」だけでは下降Dow転換完了ではない。
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>4枚の図から覚えること</h2>
+      <p>高値だけを見ない。安値だけを見ない。</p>
+      <p>
+        「切り上がったように見える」「切り下がったように見える」ことと、
+        「Dowとして確定した」ことは違う。
+      </p>
+      <p>
+        高値・安値双方の構造が揃い、明確な転換が完成するまでは、
+        それまでのTrendが継続していると考える。
+      </p>
+    </section>
+
+    <section class="block" id="kataochi-dow">
+      <h2>片落ちダウ</h2>
+      <p>
+        実際のChartでは、高値側だけ、または安値側だけに転換の兆候が先に出ることがある。
+        しかし片側だけでは、Dow転換はまだ完成していない。
+      </p>
+      <p>
+        当サイトでは、このような「片側だけを見てDow転換が完成したように扱う状態」を、
+        分かりやすく揶揄して「片落ちダウ」と表現している。
+        正式なDow理論の用語ではない。
+      </p>
+      <p>
+        一般的なDow理論の考え方と、本サイト / TRADE LOGICでの実戦上の扱いを混同しない。
+      </p>
+    </section>
+
+    <section class="block">
       <h2>片側の更新だけで転換としない</h2>
       <p>
         Web上などでは、高値または安値の片方の更新だけを
