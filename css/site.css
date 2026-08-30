@@ -251,6 +251,21 @@ body[data-page="home"] .hero .sub {
   font-size: 0.9rem;
 }
 
+/* Home: RoboMei 実践導線だけ暖色で強調（他タイルは .toc-card のまま） */
+.toc-card--robomei {
+  background: #ecc09a;
+  border-color: var(--accent);
+}
+
+.toc-card--robomei:hover {
+  background: #e4b48a;
+  border-color: var(--accent);
+}
+
+.toc-card--robomei p {
+  color: #53443c;
+}
+
 .page-kicker {
   color: var(--accent);
   font-size: 0.85rem;
