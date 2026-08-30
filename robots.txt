@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fx-logichomepage.onrender.com/sitemap.xml
