@@ -68,6 +68,7 @@ const GLOSSARY = {
 };
 
 const NAV_ITEMS = [
+  { href: "../beginner/", label: "初心者向け｜学習スケジュール", id: "beginner" },
   { href: "../logic/", label: "01｜ロジック（手法）公開", id: "logic" },
   { href: "../basis/", label: "02｜基準 ― H4 UpDateStall", id: "basis" },
   { href: "../dow/", label: "03｜Dow理論", id: "dow" },
@@ -148,6 +149,11 @@ function initShell() {
     if (item.id === pageId) a.classList.add("is-current");
     nav.appendChild(a);
   });
+
+  const robomeiLink = document.createElement("a");
+  robomeiLink.href = "https://robomei-scalping.onrender.com/";
+  robomeiLink.textContent = "RoboMei Scalping（実践）";
+  nav.appendChild(robomeiLink);
 
   const openToc = () => {
     drawer.classList.add("is-open");

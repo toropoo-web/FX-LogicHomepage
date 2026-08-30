@@ -1068,6 +1068,90 @@ body[data-page="home"] .hero .sub {
   color: var(--text-muted);
 }
 
+/* ===== BEGINNER ROADMAP ===== */
+.roadmap {
+  display: grid;
+  gap: 0;
+  margin: 1.25rem 0 1.75rem;
+  padding: 0.35rem 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 36rem;
+}
+
+.roadmap a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.42rem 0.95rem;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.roadmap a:last-child {
+  border-bottom: 0;
+}
+
+.roadmap a:hover {
+  background: var(--surface-soft);
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.rm-num {
+  flex: 0 0 4.6rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.material-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0 0 0.85rem;
+}
+
+.material {
+  flex: 1 1 11rem;
+  max-width: 16rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-soft);
+}
+
+.material p {
+  margin: 0 0 0.45rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.material .cta-btn {
+  margin: 0;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.88rem;
+}
+
+.learn-flow {
+  color: var(--text-muted);
+}
+
+.practice-ol {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  max-width: 46rem;
+}
+
+.practice-ol li {
+  margin: 0.25rem 0;
+}
+
 .faq-list {
   display: grid;
   gap: 0.75rem;
@@ -1162,5 +1246,17 @@ body[data-page="home"] .hero .sub {
 
   .chart-card {
     margin-right: 0.15rem;
+  }
+
+  .roadmap {
+    max-width: none;
+  }
+
+  .rm-num {
+    flex-basis: 4.2rem;
+  }
+
+  .material {
+    max-width: none;
   }
 }
