@@ -1152,6 +1152,30 @@ body[data-page="home"] .hero .sub {
   margin: 0.25rem 0;
 }
 
+.learn-visual {
+  margin: 1.15rem auto 0.85rem;
+  max-width: 22rem;
+}
+
+.learn-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.learn-visual figcaption {
+  margin: 0.55rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.learn-visual--portrait {
+  max-width: 20rem;
+}
+
 .faq-list {
   display: grid;
   gap: 0.75rem;
@@ -1257,6 +1281,11 @@ body[data-page="home"] .hero .sub {
   }
 
   .material {
+    max-width: none;
+  }
+
+  .learn-visual,
+  .learn-visual--portrait {
     max-width: none;
   }
 }
